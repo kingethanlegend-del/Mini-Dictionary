@@ -1,0 +1,40 @@
+dictionary = {}
+while True:
+    print("\nMini Dictionary App\n")
+    print("1. Add/Update a word")
+    print("2. Retrieve a word's definition")
+    print("3. To delete a word")
+    print("4. To view a word")
+    print("5. Exit")
+
+    choice = int(input("Choose an option (1-5)"))
+    if choice == 1:
+        word = input("Enter the word: ").strip()
+        definition = input("Enter the definition: ").strip()
+        dictionary[word] = definition
+        print(f"Word '{word}' added/updated successfully")
+        
+    elif choice ==2:
+        word = input("Enter the word to retrieve: ").strip()
+        if word in dictionary:
+            print(f"{word}: {dictionary[word]}")
+        else:
+            print(f"The word '{word} ' is not in the dictionary.")
+
+    elif choice ==3:
+        word = input("Enter a word to delete  ").strip()
+        if word in dictionary:
+            del dictionary[word]
+            print(f"The word '{word}' has been deleted.")
+        else:
+            print(f"The word '{word}' is not in the dictionary.") 
+
+    elif choice ==4:
+        if dictionary:
+            print()
+        
+
+                  
+        
+            
+                  
